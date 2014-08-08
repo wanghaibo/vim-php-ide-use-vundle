@@ -18,7 +18,7 @@
 如果在这之前你从未使用过vim，尝试一下[这篇教程](http://www.viemu.com/a-why-vi-vim.html)和[Vim cheat sheet](http://www.tuxfiles.org/linuxhelp/vimcheat.html)
 
 ###php语法高亮
-vim能读懂php，可以通过[php.vim]http://www.vim.org/scripts/script.php?script_id=1571来加强
+vim能读懂php，可以通过[php.vim](http://www.vim.org/scripts/script.php?script_id=1571)来加强
 
 ###php语法检查和聆听功能
 大多数ide会定期的执行php语法解析，vim的一个亮点就是你可以非常简单的执行命令行
