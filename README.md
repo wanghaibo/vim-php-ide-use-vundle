@@ -17,3 +17,92 @@
 ###开始吧
 如果在这之前你从未使用过vim，尝试一下[这篇教程](http://www.viemu.com/a-why-vi-vim.html)和[Vim cheat sheet](http://www.tuxfiles.org/linuxhelp/vimcheat.html)
 
+###php语法高亮
+vim能读懂php，可以通过[php.vim]http://www.vim.org/scripts/script.php?script_id=1571来加强
+
+###php语法检查和聆听功能
+大多数ide会定期的执行php语法解析，vim的一个亮点就是你可以非常简单的执行命令行
+<code>
+:!php -l %
+</code>
+[PHP QA tools ](https://github.com/joonty/vim-phpqa)可以提醒[quickfix](http://vimdoc.sourceforge.net/htmldoc/quickfix.html)
+
+当然还有支持更多语言的插件供使用[syntastic](https://github.com/scrooloose/syntastic)
+
+###tags和自动补全
+自动补全和在多文件中跳转到class和function定义的地方是大多数ide提供的功能。所有的ide通过创建定义数据库来实现，许多人认为这是为啥不用vim的一个原因。实际上不是这样的。
+
+万能补全是vim7+的一项功能，她通过读通过ctags生成的tag文件来工作。这个文件包含了项目中所有类，方法和变量的定义。你可以使用
+<code>
+<c-x><c-o>
+</code>
+来在插入模式汇总进行补全
+
+####一个更快的方式
+个人使用的是vim 的local keyword completion （只能在当前文件补全）
+
+####如何产生ctags
+[ctags](http://ctags.sourceforge.net/)
+在php顶级目录中使用以下命令：
+<code>
+ctags-exuberant -f php.tags --languages=PHP -R
+</code>
+然后告诉vim  tags的位置
+<code>
+:set tags=~/path/to/php.tags
+</code>
+
+插入模式下键入
+<code>
+ <c-x><c-o>
+</code>
+进入补全模式
+键入
+<code>
+<c-]>
+</code>
+去class定义的地方
+
+另外一个简洁的方式，键入：
+<code>
+:tag MyLovelyClass
+</code>
+然后键入回车
+
+推荐一个插件[phpcomplete plugin](http://www.vim.org/scripts/script.php?script_id=3171)加强了万能补全
+[SuperTab](http://www.vim.org/scripts/script.php?script_id=1643)可以通过tab建来触发补全
+
+####自动产生tag
+手动更新tags是非常蛋疼的，本文作者自己写了一个插件[taggatron](https://github.com/joonty/vim-taggatron)
+
+
+###Codesniffer and md
+[PHP QA tools](http://www.vim.org/scripts/script.php?script_id=3980) 
+
+###phpunit
+[PHPUnitQF](http://www.vim.org/scripts/script.php?script_id=4054)
+
+###Xdebug 整合
+不介绍了
+
+###一键安装
+*[NERDTree](http://www.vim.org/scripts/script.php?script_id=1658)文件树
+*[Fugitive](http://www.vim.org/scripts/script.php?script_id=2975)最佳git插件
+*[Ctrl-P](https://github.com/kien/ctrlp.vim)超级快的打开文件和查找文件
+*EasyMotion 
+*Vim-Sauce
+*Syntastic
+
+
+
+
+
+
+
+
+
+
+
+
+
+
