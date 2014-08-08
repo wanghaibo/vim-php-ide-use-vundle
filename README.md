@@ -86,12 +86,20 @@ ctags-exuberant -f php.tags --languages=PHP -R
 不介绍了
 
 ###一键安装
-*[NERDTree](http://www.vim.org/scripts/script.php?script_id=1658)文件树
-*[Fugitive](http://www.vim.org/scripts/script.php?script_id=2975)最佳git插件
-*[Ctrl-P](https://github.com/kien/ctrlp.vim)超级快的打开文件和查找文件
-*EasyMotion 
-*Vim-Sauce
-*Syntastic
+* [NERDTree](http://www.vim.org/scripts/script.php?script_id=1658)文件树
+* [Fugitive](http://www.vim.org/scripts/script.php?script_id=2975)最佳git插件
+* [Ctrl-P](https://github.com/kien/ctrlp.vim)超级快的打开文件和查找文件
+* EasyMotion 
+* Vim-Sauce
+* Syntastic
+* UltiSnips  代码片段模板
+* PDV  文档生成工具
+* Skeletons  php文件骨架生成器
+* Syntastic 检测PHPMD linting PHP_CodeSniffer 
+* Easymotion 字符查找加强
+* ctrlp 快速文件打开
+* zencodeing   
+
 
 
 
