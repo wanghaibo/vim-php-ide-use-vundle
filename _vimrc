@@ -2,7 +2,7 @@ set nocompatible              " be iMproved, required
 filetype off                  " required
 
 " set the runtime path to include Vundle and initialize
-set rtp+=~/.vim/bundle/Vundle.vim
+set rtp+=D:\Vim\vimfiles\bundle\Vundle.vim
 call vundle#begin()
 " alternatively, pass a path where Vundle should install plugins
 "call vundle#begin('~/some/path/here')
@@ -16,6 +16,7 @@ Plugin 'honza/vim-snippets'
 Plugin 'molokai'
 Plugin 'scrooloose/nerdtree.git'
 Plugin 'phpcomplete.vim'
+Plugin 'tpope/vim-fugitive.git'
 
 
 " All of your Plugins must be added before the following line
@@ -26,30 +27,30 @@ filetype plugin indent on    " required
 "php complete
 autocmd FileType php set omnifunc=phpcomplete#CompletePHP
 
-set hlsearch                  "¸ßÁÁ¶È·´°×
-set backspace=2               "¿ÉËæÊ±ÓÃµ¹ÍË¼üÉ¾³ı
-set autoindent                 "×Ô¶¯ËõÅÅ
-set ruler                      "¿ÉÏÔÊ¾×îºóÒ»ĞĞµÄ×´Ì¬
-set showmode                 "×óÏÂ½ÇÄÇÒ»ĞĞµÄ×´Ì¬
-set nu                        "¿ÉÒÔÔÚÃ¿Ò»ĞĞµÄ×îÇ°ÃæÏÔÊ¾ĞĞºÅ
-set bg=dark                   "ÏÔÊ¾²»Í¬µÄµ×É«É«µ÷
-syntax on                     "½øĞĞÓï·¨¼ìÑé£¬ÑÕÉ«ÏÔÊ¾
-set wrap                      "×Ô¶¯ÕÛĞĞ
+set hlsearch                  "é«˜äº®åº¦åç™½
+set backspace=2               "å¯éšæ—¶ç”¨å€’é€€é”®åˆ é™¤
+set autoindent                 "è‡ªåŠ¨ç¼©æ’
+set ruler                      "å¯æ˜¾ç¤ºæœ€åä¸€è¡Œçš„çŠ¶æ€
+set showmode                 "å·¦ä¸‹è§’é‚£ä¸€è¡Œçš„çŠ¶æ€
+set nu                        "å¯ä»¥åœ¨æ¯ä¸€è¡Œçš„æœ€å‰é¢æ˜¾ç¤ºè¡Œå·
+set bg=dark                   "æ˜¾ç¤ºä¸åŒçš„åº•è‰²è‰²è°ƒ
+syntax on                     "è¿›è¡Œè¯­æ³•æ£€éªŒï¼Œé¢œè‰²æ˜¾ç¤º
+set wrap                      "è‡ªåŠ¨æŠ˜è¡Œ
 set shiftwidth=4
 set tabstop=4
 set softtabstop=4
-set expandtab                  "½«tabÌæ»»ÎªÏàÓ¦ÊıÁ¿¿Õ¸ñ
+set expandtab                  "å°†tabæ›¿æ¢ä¸ºç›¸åº”æ•°é‡ç©ºæ ¼
 set smartindent
 
-set encoding=utf8               "ÉèÖÃÄÚ²¿±àÂëÎªutf8
-set fileencoding=utf8            "µ±Ç°±à¼­µÄÎÄ¼ş±àÂë
-set fileencodings=uft8-bom,utf8,gbk,gb2312,big5   "´ò¿ªÖ§³Ö±àÂëµÄÎÄ¼ş
-"½â¾öconsleÊä³öÂÒÂë
+set encoding=utf8               "è®¾ç½®å†…éƒ¨ç¼–ç ä¸ºutf8
+set fileencoding=utf8            "å½“å‰ç¼–è¾‘çš„æ–‡ä»¶ç¼–ç 
+set fileencodings=uft8-bom,utf8,gbk,gb2312,big5   "æ‰“å¼€æ”¯æŒç¼–ç çš„æ–‡ä»¶
+"è§£å†³consleè¾“å‡ºä¹±ç 
 language messages zh_CN.utf-8
-"½â¾ö²Ëµ¥ÂÒÂë
+"è§£å†³èœå•ä¹±ç 
 source $VIMRUNTIME/delmenu.vim
 source $VIMRUNTIME/menu.vim
-" Óëwindows¹²Ïí¼ôÌù°åshare clipboard with windows
+" ä¸windowså…±äº«å‰ªè´´æ¿share clipboard with windows
 set clipboard+=unnamed
 
 set guifont=Consolas:h12
@@ -58,7 +59,7 @@ colorscheme molokai
 set guioptions-=m
 set guioptions-=T
 
-" NERDTree¿ì½İ¼ü¶¨Òå
+" NERDTreeå¿«æ·é”®å®šä¹‰
 map <F10> :NERDTreeToggle<CR>
 " PDV
 inoremap <C-P> <ESC>:call PhpDocSingle()<CR>i 
@@ -68,3 +69,5 @@ vnoremap <C-P> :call PhpDocRange()<CR>
 let g:UltiSnipsExpandTrigger="<tab>"
 let g:UltiSnipsJumpForwardTrigger="<c-b>"
 let g:UltiSnipsJumpBackwardTrigger="<c-z>"
+
+autocmd QuickFixCmdPost *grep* cwindow
