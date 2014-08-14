@@ -1,0 +1,97 @@
+Installing VIM 7.3 on CentOS with Python 2.7.3 support
+
+First install some packages for correct python installation
+===========================================================
+sudo yum -y groupinstall 'Development Tools'
+sudo yum -y  install openssl-devel zlib ncurses ncurses-devel bzip2-devel
+mkdir -p ~/temp
+cd ~/temp
+wget http://python.org/ftp/python/2.7.3/Python-2.7.3.tgz
+tar zxvf Python-2.7.3.tgz
+cd Python-2.7.3
+./configure --prefix=/usr/local --with-threads --enable-shared 
+make
+sudo make altinstall
+
+echo "/usr/local/lib" >> python2.7.conf | sudo mv python2.7.conf /etc/ld.so.conf.d/python2.7.conf
+(/usr/local/lib should have libpython2.7.so )
+sudo /sbin/ldconfig
+
+" make python2.7 as default python in bash profile for vim setup
+mkdir -p ~/bin
+ln -s /usr/local/bin/python2.7 ~/bin/python
+echo "export PATH=$HOME/bin:$PATH" >> ~/.bashrc 
+source ~/.bashrc
+
+vim installation
+=================
+mkdir -p ~/temp
+cd ~/temp
+wget ftp://ftp.vim.org/pub/vim/unix/vim-7.3.tar.bz2
+tar jxvf vim-7.3.tar.bz2
+cd vim73
+./configure --enable-pythoninterp --with-python-config-dir=/usr/local/lib/python2.7/config --with-features=huge --disable-selinux
+(compile with python support)
+make
+sudo make install
+
+
+Test
+=====
+vim --version | grep Vi   - VIM - Vi IMproved 7.3 
+to check if vim supports python:
+:echo has("python") - 1
+
+Installing pathogen for other plugins
+mkdir -p ~/.vim/autoload ~/.vim/bundle
+#Pathogen
+wget --no-check-certificate -O ~/.vim/autoload/pathogen.vim https://raw.github.com/tpope/vim-pathogen/HEAD/autoload/pathogen.vim
+#NERDTree
+git clone https://github.com/scrooloose/nerdtree.git ~/.vim/bundle/nerdtree
+#Vim python-mode. PyLint, Rope, Pydoc, breakpoints from box.
+#http://www.youtube.com/watch?v=67OZNp9Z0CQ
+git clone git://github.com/klen/python-mode.git ~/.vim/bundle/python-mode
+#MiniBufExplorer
+git clone git://github.com/fholgado/minibufexpl.vim.git ~/.vim/bundle/minibufexpl.vim
+#snipMate with dependendcies
+git clone git://github.com/garbas/vim-snipmate.git ~/.vim/bundle/vim-snipmate
+# Install dependencies:
+git clone https://github.com/tomtom/tlib_vim.git ~/.vim/bundle/tlib_vim
+git clone https://github.com/MarcWeber/vim-addon-mw-utils.git ~/.vim/bundle/vim-addon-mw-utils
+git clone https://github.com/honza/snipmate-snippets.git ~/.vim/bundle/snipmate-snippets
+
+#bash shell inside vim
+
+
+Get .vimrc
+wget --no-check-certificate -O ~/.vimrc https://raw.github.com/vinodpandey/blog/master/.vimrc
+wget -O ~/.vim/bundle/conque_2.3.tar.gz http://conque.googlecode.com/files/conque_2.3.tar.gz
+cd ~/.vim/bundle
+tar zxf conque_2.3.tar.gz
+rm -rf conque_2.3.tar.gz
+Usage:
+:ConqueTerm bash
+:ConqueTermSplit bash
+:ConqueTermVSplit bash
+
+
+Note:
+=========
+1. /site-packages/Crypto/Util/number.py:57 will give warning message. A not to recommended method is to comment this line :).
+2. python-mode plugin expects that the virtual environment will have the same python version that is used for vim installaion
+with python support. e.g. above we used python 2.7, python-mode virtual environment expects python2.7. 
+[:call pymode#troubleshooting#Test() shows python2.7 path for virtual environments created with any version of python]
+3. Rope completion is very slow
+https://github.com/klen/python-mode/#rope-completion-is-very-slow
+-Disable g:pymode_rope_guess_project to make rope always create .ropeproject in current dir.
+-Delete .ropeproject from dip parent dir to make rope create .ropeproject in current dir.
+-Press <C-x>po or :RopeOpenProject to make force rope create .ropeproject in current dir.
+
+Code completion for custom modules/django apps
+-----------------------------------------------
+4. Adding a directory to python path
+export PYTHONPATH=$PYTHONPATH:$PWD
+
+
+
+
