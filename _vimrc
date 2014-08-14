@@ -1,3 +1,4 @@
+autocmd FileType php noremap <C-M> :w!<CR>:!php %<CR>
 set nocompatible              " be iMproved, required
 filetype off                  " required
 
