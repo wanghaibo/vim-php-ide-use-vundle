@@ -11,7 +11,6 @@ call vundle#begin()
 " let Vundle manage Vundle, required
 Plugin 'gmarik/Vundle.vim'
 
-Plugin 'PDV--phpDocumentor-for-Vim'
 Plugin 'SirVer/ultisnips'
 Plugin 'honza/vim-snippets'
 Plugin 'molokai'
@@ -62,13 +61,8 @@ set guioptions-=T
 
 " NERDTree快捷键定义
 map <F10> :NERDTreeToggle<CR>
-" PDV
-inoremap <C-P> <ESC>:call PhpDocSingle()<CR>i 
-nnoremap <C-P> :call PhpDocSingle()<CR> 
-vnoremap <C-P> :call PhpDocRange()<CR>
 "ultisnips
 let g:UltiSnipsExpandTrigger="<tab>"
 let g:UltiSnipsJumpForwardTrigger="<c-b>"
 let g:UltiSnipsJumpBackwardTrigger="<c-z>"
-
-autocmd QuickFixCmdPost *grep* cwindow
+set tags+=~/tags,~/tags2
