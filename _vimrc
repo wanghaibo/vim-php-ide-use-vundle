@@ -17,7 +17,7 @@ Plugin 'molokai'
 Plugin 'scrooloose/nerdtree.git'
 Plugin 'phpcomplete.vim'
 Plugin 'tpope/vim-fugitive.git'
-Plugin 'ZenCoding.vim'
+Plugin 'mattn/emmet-vim'
 
 
 " All of your Plugins must be added before the following line
