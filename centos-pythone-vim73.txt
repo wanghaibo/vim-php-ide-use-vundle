@@ -30,6 +30,7 @@ cd ~/temp
 wget ftp://ftp.vim.org/pub/vim/unix/vim-7.3.tar.bz2
 tar jxvf vim-7.3.tar.bz2
 cd vim73
+export LIBS=-lpython2.7
 ./configure --enable-pythoninterp --with-python-config-dir=/usr/local/lib/python2.7/config --with-features=huge --disable-selinux
 (compile with python support)
 make
