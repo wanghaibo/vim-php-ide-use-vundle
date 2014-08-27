@@ -7,7 +7,7 @@ git archive --remote=git://github.com/wanghaibo/vim-php-ide-use-vundle.git HEAD 
 3. :PluginInstall
 4. python version ：https://github.com/SirVer/ultisnips/issues/307
 5. youcompleteme https://github.com/Valloric/YouCompleteMe/
-
+6. brew install vim --env-std --override-system-vim
 
 ./configure --with-features=huge \
             --enable-multibyte \
