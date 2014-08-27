@@ -66,11 +66,11 @@ set guioptions-=T
 map <F10> :NERDTreeToggle<CR>
 " Tagbar 快捷键
 nmap <F8> :TagbarToggle<CR>
-nmap <F7> :SyntasticCheck phpcs phpmd<CR>
 
+nmap <F7> :SyntasticCheck phpcs phpmd<CR>
+nmap <F5> :lprev<CR>
+nmap <F6> :lnext<CR>
 let g:syntastic_php_checkers = ['php', 'phpcs', 'phpmd']
-"在打开文件的时候检查
-"let g:syntastic_check_on_open=1
 ""phpcs，tab 4个空格，编码参考使用CodeIgniter风格
 let g:syntastic_phpcs_conf = "--tab-width=4 --standard=CodeIgniter"
 
