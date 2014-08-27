@@ -7,3 +7,15 @@ git archive --remote=git://github.com/wanghaibo/vim-php-ide-use-vundle.git HEAD 
 3. :PluginInstall
 4. python version ：https://github.com/SirVer/ultisnips/issues/307
 5. youcompleteme https://github.com/Valloric/YouCompleteMe/
+./configure --with-features=huge \
+            --enable-multibyte \
+            --enable-rubyinterp \
+            --enable-pythoninterp \
+            --with-python-config-dir=/usr/local/lib/python2.7/config \
+            --enable-perlinterp \
+            --enable-luainterp \
+            --enable-gui=gtk2 --enable-cscope --prefix=/usr/local/vim73
+
+
+
+cmake -G "Unix Makefiles" -DPYTHON_LIBRARY=/usr/local/lib/libpython2.7.so -DPYTHON_INCLUDE_DIR=/usr/local/include/python2.7/ . ~/.vim/bundle/YouCompleteMe/third_party/ycmd/cpp
