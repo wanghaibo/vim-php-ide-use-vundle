@@ -18,7 +18,7 @@ Plugin 'scrooloose/nerdtree.git'
 Plugin 'phpcomplete.vim'
 Plugin 'tpope/vim-fugitive.git'
 Plugin 'mattn/emmet-vim'
-
+Plugin 'majutsushi/tagbar'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
@@ -62,6 +62,8 @@ set guioptions-=T
 
 " NERDTree快捷键定义
 map <F10> :NERDTreeToggle<CR>
+" Tagbar快捷键
+nmap <F8> :TagbarToggle<CR>
 "ultisnips
 let g:UltiSnipsExpandTrigger="<tab>"
 let g:UltiSnipsJumpForwardTrigger="<c-b>"
