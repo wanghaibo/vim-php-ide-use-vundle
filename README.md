@@ -21,3 +21,5 @@ git archive --remote=git://github.com/wanghaibo/vim-php-ide-use-vundle.git HEAD 
 
 
 cmake -G "Unix Makefiles" -DPYTHON_LIBRARY=/usr/local/lib/libpython2.7.so -DPYTHON_INCLUDE_DIR=/usr/local/include/python2.7 . ~/.vim/bundle/YouCompleteMe/third_party/ycmd/cpp
+
+export LIBS=-lpython2.7
