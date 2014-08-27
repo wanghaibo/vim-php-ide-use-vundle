@@ -73,6 +73,7 @@ nmap <F6> :lnext<CR>
 let g:syntastic_php_checkers = ['php', 'phpcs', 'phpmd']
 ""phpcs，tab 4个空格，编码参考使用CodeIgniter风格
 let g:syntastic_phpcs_conf = "--tab-width=4 --standard=CodeIgniter"
+let g:syntastic_auto_loc_list=1
 
 "ultisnips
 let g:UltiSnipsExpandTrigger="<tab>"
