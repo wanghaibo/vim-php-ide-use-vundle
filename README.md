@@ -9,6 +9,7 @@
     --enable-luainterp \  
     --enable-gui=gtk2 --enable-cscope --prefix=/usr/local/vim74
     ```
+    
 1. git clone https://github.com/gmarik/Vundle.vim.git ~/.vim/bundle/Vundle.vim
 2. git archive --remote=git://github.com/wanghaibo/vim-php-ide-use-vundle.git HEAD _vimrc
 3. :PluginInstall
