@@ -1,4 +1,4 @@
-+ brew install vim --env-std --override-system-vim  
+0. brew install vim --env-std --override-system-vim  
     ```Shell
     ./configure --with-features=huge \  
     --enable-multibyte \  
