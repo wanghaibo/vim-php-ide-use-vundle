@@ -1,6 +1,6 @@
 0. brew install vim --env-std --override-system-vim  
     > ./configure --with-features=huge \  
-    --enable-multibyte \  
+    > --enable-multibyte \  
     --enable-rubyinterp \  
     --enable-pythoninterp \  
     --with-python-config-dir=/usr/local/lib/python2.7/config \  
