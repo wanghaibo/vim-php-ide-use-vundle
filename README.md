@@ -1,12 +1,12 @@
 0. brew install vim --env-std --override-system-vim
-            >./configure --with-features=huge \
-            --enable-multibyte \
-            --enable-rubyinterp \
-            --enable-pythoninterp \
-            --with-python-config-dir=/usr/local/lib/python2.7/config \
-            --enable-perlinterp \
-            --enable-luainterp \
-            --enable-gui=gtk2 --enable-cscope --prefix=/usr/local/vim74
+            > ./configure --with-features=huge \
+            > --enable-multibyte \
+            > --enable-rubyinterp \
+            > --enable-pythoninterp \
+            > --with-python-config-dir=/usr/local/lib/python2.7/config \
+            > --enable-perlinterp \
+            > --enable-luainterp \
+            > --enable-gui=gtk2 --enable-cscope --prefix=/usr/local/vim74
 1. <code>
 git clone https://github.com/gmarik/Vundle.vim.git ~/.vim/bundle/Vundle.vim
 </code>
