@@ -20,6 +20,7 @@ Plugin 'tpope/vim-fugitive.git'
 Plugin 'mattn/emmet-vim'
 Plugin 'majutsushi/tagbar'
 Plugin 'scrooloose/syntastic'
+Plugin 'Valloric/YouCompleteMe'
 
 
 " All of your Plugins must be added before the following line
@@ -67,16 +68,18 @@ map <F10> :NERDTreeToggle<CR>
 " Tagbar 快捷键
 nmap <F8> :TagbarToggle<CR>
 
-nmap <F7> :SyntasticCheck phpcs phpmd<CR>
+" phpcs，tab 4个空格，编码参考使用Zend风格
+let g:syntastic_phpcs_conf = "-n --tab-width=4 --standard=Zend"
+nmap <F7> :SyntasticCheck phpcs<CR>
 nmap <F5> :lprev<CR>
 nmap <F6> :lnext<CR>
-let g:syntastic_php_checkers = ['php', 'phpcs', 'phpmd']
-""phpcs，tab 4个空格，编码参考使用CodeIgniter风格
-let g:syntastic_phpcs_conf = "--tab-width=4 --standard=CodeIgniter"
+let g:syntastic_php_checkers = ['php', 'phpcs']
+let g:syntastic_loc_list_height = 5
 let g:syntastic_auto_loc_list=1
 
 "ultisnips
-let g:UltiSnipsExpandTrigger="<tab>"
+"let g:UltiSnipsExpandTrigger="<tab>"
+let g:UltiSnipsExpandTrigger="<c-j>"
 let g:UltiSnipsJumpForwardTrigger="<c-b>"
 let g:UltiSnipsJumpBackwardTrigger="<c-z>"
 set tags+=~/tags,~/tags2
