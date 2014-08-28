@@ -19,5 +19,6 @@
     export LIBS=-lpython2.7  
     cmake -G "Unix Makefiles" -DPYTHON_LIBRARY=/usr/local/lib/libpython2.7.so              -DPYTHON_INCLUDE_DIR=/usr/local/include/python2.7 . ~/.vim/bundle/YouCompleteMe/third_party/ycmd/cpp
     ```
+    
 6. phpcs --config-set show_warnings 0 
 
