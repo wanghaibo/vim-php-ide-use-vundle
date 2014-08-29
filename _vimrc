@@ -86,3 +86,6 @@ set tags+=~/tags,~/tags2
 
 " snips 作者
 let g:snips_author="wanghaibo@myhexin.com"
+
+" open tags in newtab
+nnoremap <C-]> <C-w><C-]><C-w>T
