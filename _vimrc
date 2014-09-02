@@ -15,12 +15,14 @@ Plugin 'SirVer/ultisnips'
 Plugin 'honza/vim-snippets'
 Plugin 'molokai'
 Plugin 'scrooloose/nerdtree.git'
-Plugin 'phpcomplete.vim'
 Plugin 'tpope/vim-fugitive.git'
 Plugin 'mattn/emmet-vim'
 Plugin 'majutsushi/tagbar'
 Plugin 'scrooloose/syntastic'
 Plugin 'Valloric/YouCompleteMe'
+Plugin 'php.vim'
+Plugin 'godlygeek/tabular'
+Plugin 'shawncplus/phpcomplete.vim'
 
 
 " All of your Plugins must be added before the following line
