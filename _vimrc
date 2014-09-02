@@ -91,3 +91,7 @@ let g:snips_author="wanghaibo@myhexin.com"
 
 " open tags in newtab
 nnoremap <C-]> <C-w><C-]><C-w>T
+
+let g:phpcomplete_min_num_of_chars_for_namespace_completion = 3
+
+nmap <F4> :Tab /=<CR>
