@@ -14,10 +14,15 @@
 2. git archive --remote=git://github.com/wanghaibo/vim-php-ide-use-vundle.git HEAD _vimrc
 3. :PluginInstall
 4. python version ：https://github.com/SirVer/ultisnips/issues/307
-5. youcompleteme https://github.com/Valloric/YouCompleteMe/
+5. youcompleteme https://github.com/Valloric/YouCompleteMe/(cmake >=2.8)
     ```Shell
+    cd ~
+    mkdir ycm_build
+    cd ycm_build
+    
     export LIBS=-lpython2.7  
     cmake -G "Unix Makefiles" -DPYTHON_LIBRARY=/usr/local/lib/libpython2.7.so              -DPYTHON_INCLUDE_DIR=/usr/local/include/python2.7 . ~/.vim/bundle/YouCompleteMe/third_party/ycmd/cpp
+    make ycm_support_libs
     ```
     
 6. phpcs --config-set show_warnings 0 
