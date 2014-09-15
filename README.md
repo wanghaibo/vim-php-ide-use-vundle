@@ -16,6 +16,8 @@
 4. python version ：https://github.com/SirVer/ultisnips/issues/307  
     ```Shell
     ./configure --prefix=/usr/local --with-threads --enable-shared CFLAGS=-fPIC  
+    make  
+    sudo make altinstall  
     ```
     
 5. youcompleteme https://github.com/Valloric/YouCompleteMe/(cmake >=2.8)
