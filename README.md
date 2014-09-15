@@ -18,6 +18,8 @@
     ./configure --prefix=/usr/local --with-threads --enable-shared CFLAGS=-fPIC  
     make  
     sudo make altinstall  
+    echo "/usr/local/lib" >> python2.7.conf | sudo mv python2.7.conf /etc/ld.so.conf.d/python2.7.conf  
+    ldconfig  
     ```
     
 5. youcompleteme https://github.com/Valloric/YouCompleteMe/(cmake >=2.8)
