@@ -14,6 +14,9 @@
 2. git archive --remote=git://github.com/wanghaibo/vim-php-ide-use-vundle.git HEAD _vimrc
 3. :PluginInstall
 4. python version ：https://github.com/SirVer/ultisnips/issues/307
+    ```Shell
+    ./configure --prefix=/usr/local --with-threads --enable-shared CFLAGS=-fPIC
+    ```
 5. youcompleteme https://github.com/Valloric/YouCompleteMe/(cmake >=2.8)
     ```Shell
     cd ~
