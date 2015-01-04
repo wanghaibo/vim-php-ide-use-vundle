@@ -1,4 +1,5 @@
 ###vim 去掉utf8 bom方法
+
     ```Shell
     '去掉utf-8 BOM
     :set nobomb
