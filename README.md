@@ -19,7 +19,11 @@
     make  
     sudo make altinstall  
     echo "/usr/local/lib" >> python2.7.conf | sudo mv python2.7.conf /etc/ld.so.conf.d/python2.7.conf  
-    ldconfig  
+    ldconfig 
+    mkdir -p ~/bin
+    ln -s /usr/local/bin/python2.7 ~/bin/python
+    echo "export PATH=$HOME/bin:$PATH" >> ~/.bashrc 
+    source ~/.bashrc
     ```
     
 5. youcompleteme https://github.com/Valloric/YouCompleteMe/(cmake >=2.8)
