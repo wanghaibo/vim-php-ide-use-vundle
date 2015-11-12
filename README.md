@@ -42,7 +42,7 @@
     ```Shell
     ctags --langmap=php:.engine.inc.module.theme.php  --php-kinds=cidf --languages=+PHP,-JavaScript  -R
     ```
-8.Error: python-devel conflicts with python
+8. Error: python-devel conflicts with python
     ```Shell
     yum clean all
     yum install yum-utils
