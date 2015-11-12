@@ -39,6 +39,7 @@
     
 6. phpcs --config-set show_warnings 0 
 7. ctags 5.6不支持abstract  可以使用ctags5.8及以上版本http://ctags.sourceforge.net/来实现ctags --langmap=php:.engine.inc.module.theme.php  --php-kinds=cidf --languages=+PHP,-JavaScript  -R
+
 8.Error: python-devel conflicts with python
     ```Shell
     yum clean all
