@@ -1,5 +1,6 @@
 0. brew install vim --env-std --override-system-vim(vim >=74 python>=2.7)
     ```Shell
+    export LIBS=-lpython2.7
     ./configure --with-features=huge \  
     --enable-multibyte \  
     --enable-rubyinterp \  
