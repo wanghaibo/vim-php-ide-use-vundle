@@ -8,7 +8,7 @@
     --with-python-config-dir=/usr/local/lib/python2.7/config \  
     --enable-perlinterp \  
     --enable-luainterp \  
-    --enable-gui=gtk2 --enable-cscope --prefix=/usr/local/vim74
+    --enable-gui=gtk2 --enable-cscope --prefix=/usr/local/vim74 --with-luajit --enable-fail-if-missing
     ```
     
 1. git clone https://github.com/gmarik/Vundle.vim.git ~/.vim/bundle/Vundle.vim
